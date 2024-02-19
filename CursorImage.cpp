@@ -39,16 +39,18 @@ int main()
 				
 				movement.x = event.mouseMove.x;
 				movement.y = event.mouseMove.y;
-				std::cout <<" MX = " << movement.x << std::endl;
-				std::cout <<" MY = " << movement.y << std::endl;
+				//std::cout <<" MX = " << movement.x << std::endl;
+				//std::cout <<" MY = " << movement.y << std::endl;
 			}
 		}
 	
 		win.clear();
+		sprite.setPosition(movement);
+		
 		//sprite.move(movement * ((float)tickRate.asMilliseconds() / 1000));
 		//sprite.move(movement);
 		//win.draw(sf::CircleShape(20));
-		//sprite.setPosition(movement * ((float)tickRate.asMilliseconds() / 1000));
+		//gisprite.setPosition(movement * ((float)tickRate.asMilliseconds() / 1000));
 		win.draw(sprite);
 		win.display();
 	}
